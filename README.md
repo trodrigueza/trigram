@@ -3,39 +3,73 @@ Trigram Language Model
 
 Exercise left by Karpathy in his [building makemore part 1 video](https://www.youtube.com/watch?v=PaCmpygFfXo).
 
-Current results:
+### Current results:
+#### Version 1:
+  Final loss: 2.252274513244629
 
-- Final loss: 2.3513777256011963
+  Names(30):
+  - brisjen.
+  - ileedel.
+  - ee.
+  - aghee.
+  - ceadile.
+  - brux.
+  - wy.
+  - kayn.
+  - ron.
+  - eckanie.
+  - an.
+  - ilperben.
+  - erahre.
+  - acer.
+  - ostylay.
+  - armikhie.
+  - alesedav.
+  - ada.
+  - sanademiyahtajoarih.
+  - vollielennla.
+  - lerilis.
+  - raniohan.
+  - eb.
+  - is.
+  - maliassovan.
+  - leeli.
+  - berobrilleyliaranagal
+  - ahan.
+  - orecimackarkna.
+  - va.
 
-Names (30):
+#### Version 2:
+  Final loss: 2.107
 
-- brisjen.
-- sleedel.
-- ee.
-- ca.
-- geec.
-- adile.
-- brux.
-- kyailperben.
-- erahre.
-- mere.
-- kayn.
-- jon.
-- jckanie.
-- bron.
-- tylay.
-- armikhie.
-- alesedav.
-- mia.
-- sanademiyahtajoarih.
-- vollielennla.
-- lerilis.
-- raniohan.
-- eb.
-- calevejassovan.
-- teeli.
-- berobrilleyliaranagal
-- ahan.
-- jeesimackarkna.
-- sa.
-- te.
+  Names(30):
+  - zai.
+  - un.
+  - vanna.
+  - xyli.
+  - ravana.
+  - vic.
+  - die.
+  - ra.
+  - uciougunaisie.
+  - blenlah.
+  - lenia.
+  - quana.
+  - izephamaed.
+  - rohessynn.
+  - luwan.
+  - yah.
+  - letjzkccarick.
+  - olizy.
+  - spelin.
+  - noldoreigab.
+  - ya.
+  - olaveiahzli.
+  - xzardezi.
+  - evalennearielanaspypw
+  - deydo.
+  - yahreon.
+  - emilendrie.
+  - ra.
+  - nirosithyley.
+  - yon.

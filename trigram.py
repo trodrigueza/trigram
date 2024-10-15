@@ -16,7 +16,7 @@ g = torch.Generator().manual_seed(7)
 # training set of trigrams: for (a, b) the label is c
 xs, ys = [], []
 for word in words:
-  nw = ['.', '.'] + list(word) + ['.'] # . is special character for starting and ending a word
+  nw = ['.'] + list(word) + ['.'] # . is special character for starting and ending a word
   for a, b, c in zip(nw, nw[1:], nw[2:]):
     xs.append([stoi[a], stoi[b]])
     ys.append(stoi[c])
