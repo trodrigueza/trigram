@@ -1,8 +1,6 @@
 # trigram
 Trigram Language Model
 
-Exercise left by Karpathy in his [building makemore part 1 video](https://www.youtube.com/watch?v=PaCmpygFfXo).
-
 ### Current results:
 #### Version 1:
   Final loss: 2.252274513244629
