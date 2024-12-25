@@ -71,3 +71,38 @@ Trigram Language Model
   - ra.
   - nirosithyley.
   - yon.
+
+#### Version 2 with optimizer:
+  Final loss: 2.088
+
+  Names (30):
+  - zai.
+  - un.
+  - ganna.
+  - xya.
+  - .
+  - el.
+  - raadvic.
+  - die.
+  - ozzaciougunaisie.
+  - ilyn.
+  - aublenia.
+  - quana.
+  - izepaumaed.
+  - ivik.
+  - kynn.
+  - zayla.
+  - yah.
+  - illizeccarick.
+  - jaizy.
+  - spelin.
+  - dha.
+  - mae.
+  - sab.
+  - ya.
+  - glaveiahzachalianetzy
+  - evalennearielanaspypb
+  - deydo.
+  - yahreon.
+  - emilendrie.
+  - la.

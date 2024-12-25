@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+import torch.optim as optim
 
 # open dataset
 words = open('names.txt', 'r').read().splitlines()
@@ -31,21 +32,34 @@ xenc = xs[:, 0] * 27 + xs[:, 1] # (num_examples, 1)-matrix
 # initialize neural network
 W = torch.randn((27*27, 27), requires_grad=True, generator=g)
 
+# def optimizer
+optimizer = optim.Adam([W], lr=1e-1)
+
 # train / gradient descent
 for i in range(10000):
   # forward pass
   logits = W[xenc]       # log counts
-  counts = logits.exp()  # counts
-  probs = counts / counts.sum(1, keepdims=True)
-  loss = -probs[torch.arange(num_examples), ys].log().mean()
+  # counts = logits.exp()  # counts
+  # probs = counts / counts.sum(1, keepdims=True)
+  # loss = -probs[torch.arange(num_examples), ys].log().mean()
+  loss = F.cross_entropy(logits, ys)
+
   loss += 0.01 * (W**2).mean()
 
-  # backward pass
-  W.grad = None
-  loss.backward()
+  # # backward pass
+  # W.grad = None
+  # loss.backward()
 
+  # # update weights
+  # W.data += (-10 * W.grad)
+  
+  # Reset gradients to zero
+  optimizer.zero_grad()
+  # Backprop - backward pass
+  loss.backward()
   # update weights
-  W.data += (-10 * W.grad)
+  optimizer.step()
+
 
   if i % 50 == 0:
     print(f'Epoch {i}, Loss: {loss.item()}')
@@ -60,7 +74,6 @@ def sample(generator, W, itos, stoi, num_samples=10, max_length=20):
     predpred = 0
 
     while True:
-      # one-hot encode the current bigram
       xenc = ixs[-2]*27 + ixs[-1]
       logits = W[xenc]       # logits for the next character
       counts = logits.exp()   # convert logits to counts
